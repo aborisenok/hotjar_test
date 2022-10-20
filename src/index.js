@@ -4,6 +4,7 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import App from './App';
 import Expenses from './pages/Expenses';
 import Invoices from './pages/Invoices';
+import Films from './pages/Cards';
 import Invoice from './pages/Invoice';
 import './main.css';
 
@@ -32,6 +33,7 @@ ReactDOM.render(
             </main>
           }
         />
+        <Route path="films" element={<Films />} />
       </Route>
     </Routes>
   </BrowserRouter>,

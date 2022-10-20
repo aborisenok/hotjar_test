@@ -18,4 +18,48 @@ body {
   main > :last-child {
     margin-bottom: 0;
   }
-  
+
+  .cardsGrid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-auto-rows: minmax(100px, auto);
+    gap: 1rem;
+  }
+
+  .cardsGridItem {
+    border: 1px solid black;
+    border-radius: 1rem;
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+  }
+
+
+@media screen and (min-width:700px){
+  .cardsGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+
+@media screen and (min-width:1000px){
+  .cardsGrid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+    
+@media screen and (min-width:1300px){
+  .cardsGrid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+.popup {
+  position: absolute;
+  width: 50%;
+  height: 50%;
+  background: lightblue;
+  flex-direction: column;
+  left: 25%;
+  padding: 1rem;
+}
