@@ -8,7 +8,13 @@ import Films from './pages/Cards';
 import Invoice from './pages/Invoice';
 import './main.css';
 
+
+const script = document.createElement('script');
+script.setAttribute('src','./script.js');
+document.head.appendChild(script);
+
 const rootElement = document.getElementById('root');
+
 ReactDOM.render(
   <BrowserRouter>
     <Routes>
