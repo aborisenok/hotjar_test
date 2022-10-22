@@ -10,7 +10,11 @@ export default function Films() {
   return (
     <main className='cardsGrid' style={{ padding: '1rem 0' }}>
       {
-        films.map(item => {
+        films
+          .map(value => ({ value, sort: Math.random() }))
+          .sort((a, b) => a.sort - b.sort)
+          .map(({ value }) => value)
+          .map(item => {
             return (
                 <div key={item.Title} onClick={() => showPopup(item.Title)} className='cardsGridItem'>
                    {item.Title}
